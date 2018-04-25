@@ -1,0 +1,35 @@
+.Header {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+
+  padding: 0 4.9vw;
+  background-color: get-color('white');
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+    position: relative;
+  }
+}
+
+.Header a {
+  display: block;
+  margin-right: 1em;
+  padding: 1em;
+  line-height: 1;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  img {
+    height: 2rem;
+    display: block;
+  }
+}

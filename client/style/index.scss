@@ -1,0 +1,72 @@
+
+@import 'helpers/vars';
+@import 'helpers/functions';
+@import 'layout/_header';
+@import 'layout/_loading';
+@import 'layout/_message';
+
+
+html,
+body {
+  background-color: #eee;
+}
+
+body {
+  overflow-x: auto;
+  overflow-y: scroll;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#app {
+  width: 100%;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1024px) {
+    margin: 0;
+  }
+}
+
+.ListView,
+.NotFoundView {
+  margin-top: 6em;
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 0;
+  }
+}
+
+
+
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  }
+}
+
+.btn {
+  color:white;
+  text-decoration:none;
+  padding: 5px 10px;
+  border-radius:3px;
+}
+
+.btn-green {
+   @include button-bg(#2ecc71);
+}
+
+.btn-blue {
+   @include button-bg(#3498db);
+}
+
+.btn-yellow{
+   @include button-bg(#f1c40f);
+}
+
+.btn-red {
+   @include button-bg(#e74c3c);
+}

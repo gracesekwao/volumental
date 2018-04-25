@@ -1,0 +1,24 @@
+.Loading {
+  font-size: 3em;
+
+  content: "";
+  display: block;
+  width: 1em;
+  height: 1em;
+  margin: 2em auto;
+  border: solid 0.2em;
+  border-color: map-get($colors, "main") map-get($colors, "main") map-get($colors, "main") rgba(0, 0, 0, 0);
+  border-radius: 100%;
+  will-change: transform;
+
+  animation: spin .75s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
